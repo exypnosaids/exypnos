@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="LOGO ACTUAL.png" type="image/x-icon"> <!-- Favicon link -->
+  <link rel="icon" href="LOGO ACTUAL.png" type="image/x-icon"> 
   <title>EXYPNOS</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Styling for the video */
+
     video {
       cursor: pointer;
       object-fit: cover;
@@ -16,7 +16,7 @@
       height: 100%;
     }
 
-    /* Centered content */
+    
     .centered-content {
       position: absolute;
       top: 50%;
@@ -25,7 +25,7 @@
       text-align: center;
     }
 
-    /* Animation for slide-out */
+ 
     .slide-out {
       animation: slideOut 1s forwards;
     }
@@ -41,13 +41,13 @@
       }
     }
 
-    /* Responsive adjustments for small screens */
+    
     @media (max-width: 640px) {
       video {
         width: 100%;
         height: auto;
         aspect-ratio: 9 / 16;
-        object-fit: cover; /* Keeps the central part visible */
+        object-fit: cover; 
         object-position: center;
       }
     }
@@ -55,41 +55,40 @@
 </head>
 <body class="h-screen w-screen m-0 overflow-hidden bg-black">
 
-  <!-- Video Banner -->
+  
   <div class="absolute inset-0" id="comingSoon">
     <video autoplay muted loop playsinline id="bgVideo">
-      <source src="new.mp4" type="video/mp4"> <!-- Replace with your video path -->
+      <source src="new.mp4" type="video/mp4"> 
       Your browser does not support the video tag.
     </video>
     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <!-- Centered content -->
+  
       <div class="centered-content text-white">
-        <p class="text-lg sm:text-xl font-mono"></p> <!-- Replace with your text -->
+        <p class="text-lg sm:text-xl font-mono"></p> 
       </div>
     </div>
-    <!-- Time -->
+    
     <div class="absolute bottom-4 left-4 text-white font-mono text-sm sm:text-base">
-      <p>DATE:23/11/2024</p> <!-- Replace with the event time -->
+      <p>DATE:23/11/2024</p> 
     </div>
-    <!-- Venue -->
+
     <div class="absolute bottom-4 right-4 text-white font-mono text-sm sm:text-base">
-      <p>Venue: Auditorium</p> <!-- Replace with the event venue -->
+      <p>Venue: Auditorium</p> 
     </div>
   </div>
 
   <script>
     function redirectToWebsite() {
-      // Trigger the slide-out animation
+      
       const comingSoon = document.getElementById("comingSoon");
       comingSoon.classList.add("slide-out");
 
-      // Redirect after the animation is complete
       setTimeout(() => {
-        window.location.href = "http://127.0.0.1:5501/index.html"; // Replace with your target URL
-      }, 1000); // Match the animation duration (1s)
+        window.location.href = "https://exypnosaids.github.io/exypnos./"; // URL
+      }, 1000); 
     }
 
-    // Attach click event to trigger redirection
+   
     document.getElementById("comingSoon").addEventListener("click", redirectToWebsite);
   </script>
 
